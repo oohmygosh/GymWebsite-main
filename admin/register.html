@@ -1,0 +1,124 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <!-- Custom -->
+    <link rel="stylesheet" href="../css/adminStyle.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animate.css">
+
+    <title>
+        Login
+    </title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="logo">
+        <a href="../index.html">Fitness <span>Club</span></a>
+    </div>
+    <!-- Power<span style="color: red">Pack</span> Fitness Club -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="./login.html">Login</a>
+        </li>
+    </ul>
+
+</nav>
+
+
+<div class="container">
+
+
+    <div class="col-lg-6 col-md-6 offset-lg-3 offset-md-3 col-sm-12 col-xs-12"
+         style="margin-top: 3%; margin-bottom: 3%">
+        <h2>Register</h2>
+        <form method="post" class="form" onsubmit="register()" action="./login.html">
+            <div class="row">
+                <div class="form-group col">
+                    <label for="id_username">用户名</label>
+                    <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username"
+                           placeholder="enter username" maxlength="150" class="form-control" required
+                           title="请至少输入5位长度用户名" id="id_username" pattern="[a-z|0-9|A-Z]{5,}">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col">
+                    <label for="id_password">密码</label>
+                    <input type="password" name="password" autocomplete="current-password" class="form-control"
+                           placeholder="enter password" required title="请至少输入5位长度密码" id="id_password"
+                           pattern="[a-z|0-9|A-Z]{5,}">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col">
+                    <label for="id_phone">手机号</label>
+                    <input type="text" name="password" autocomplete="current-password" class="form-control"
+                           placeholder="enter phoneNumber" required title="请输入正确手机号"
+                           pattern="^1[3|4|5|7|8][0-9]{9}$"
+                           id="id_phone">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col">
+                    <label for="id_email">邮箱</label>
+                    <input type="email" name="password" autocomplete="current-password" class="form-control"
+                           placeholder="enter email" required
+                           id="id_email">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col">
+                    <label for="id_num">身份证</label>
+                    <input type="text" name="password" autocomplete="current-password" class="form-control"
+                           placeholder="enter id_num" required
+                           title="请输入正确的身份证"
+                           pattern="^[1-9]\d{5}(18|19|20)\d{2}((0[1-9])|(1[0-2]))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$"
+                           id="id_num">
+                </div>
+            </div>
+            <button class="btn btn-default" type="submit">注册</button>
+        </form>
+    </div>
+
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="../js/jquery.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script>
+    function register() {
+        let username = document.querySelector("#id_username").value;
+        let password = document.querySelector("#id_password").value;
+        let phone = document.querySelector("#id_phone").value;
+        let email = document.querySelector("#id_email").value;
+        let id_num = document.querySelector("#id_num").value;
+        localStorage.setItem("user", JSON.stringify({
+            "username": username,
+            "password": password,
+            "phone": phone,
+            "email": email,
+            "id_num": id_num,
+            "status":0
+        }))
+        alert("注册成功！")
+        return true
+    }
+</script>
+</body>
+</html>

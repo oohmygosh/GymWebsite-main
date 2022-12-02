@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" href="css/swiper-bundle.min.css">
+<body>
+</body>
+<!-- Start Header  -->
+<header>
+    <div class="container">
+        <div class="logo">
+            <a href="./index.html">Fitness <span>Club</span></a>
+        </div>
+        <h1 style="margin: 0 auto;width: 300px;color: white">关于我们</h1>
+    </div>
+</header>
+<section class="classes" id="classes">
+    <div class="container">
+        <div class="content">
+            <div class="box img wow slideInLeft">
+                <img src="images/me.jpeg" alt="classes"/>
+            </div>
+            <div class="box text wow slideInRight">
+                <h2 id="name">吴彦祖</h2>
+                <p><span id="studentID">学号：19060721</span>
+                    <span id="class">班级：1907</span></p>
+                <div class="class-items">
+                    <div class="wow bounceInUp">
+                        <h2>课程总结</h2>
+                        <p style="text-indent: 30px;line-height: 23px">转瞬之间，学期又接近尾声，在导师的精心辅导下，度过了这个富有生机，富有朝气的学期。学到了很多做梦也不会遇到的如此奇特的有趣知识，对于我来讲是一个很好的锻炼和充实的机会。俗话说的好“书山有路勤为径，学海无涯苦作舟”。在这一绝世佳句的鼓动下，我把握了工作之余的一切可利用的剩余时间，全心全意投入到网页世界，去不断的学习，去不断的收索;同时去不断的充实，去不断的完善自我，在网络的天空下逐渐的美化自己的人生!在学习网页制作的过程中，我深深体会到一点“有付出，就终有回报”，你的付出与你的回报终究是成正比的。经过了多少漫漫长路，经过了多少忘我的投入，经过了多少波折，我的网页与众人见面了。当我第一眼在网络下一览我的个人主页，我是多么的激动，多么的兴奋，就像多年未见的老同学，一种讲不出道不明的感觉。我在制作主页中的心得体会:做好主页，并不是一件容易的事，它包括个人主页的选题、内容采集整理、图片的处理、页面的排版设置、背景及其整套网页的色调等很多东西。
+                        </p>
+                    </div>
+                    <div class="wow bounceInUp">
+                        <h2>职业规划</h2>
+                        <p>1：不要去做技术上的高手，除非你的目标如此。可以提高自己的专业知识，但能胜任工作即止。</p>
+                        <p>2：提高软件知识和技术只是问题的表面，本质是要提高自己认识问题、分析问题、解决问题的思想高度。软件专业知识的很多方法和原理，可以很容易地延伸、应用到生活的其它方面。</p>
+                        <p>3：在能胜任工作的基础上，立即去涉猎其它领域的专业知识，丰富自己的知识体系、提高自己的综合素质。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Start Contact -->
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="content">
+            <div class="box form wow slideInLeft">
+                <form>
+                    <label>
+                        <input type="text" placeholder="Enter Name">
+                    </label>
+                    <label>
+                        <input type="text" placeholder="Enter Email">
+                    </label>
+                    <label>
+                        <input type="text" placeholder="Enter Mobile">
+                    </label>
+                    <label>
+                        <textarea placeholder="Enter Message"></textarea>
+                    </label>
+                    <button type="button" onclick="printInfo()">Send Message</button>
+                </form>
+            </div>
+            <div class="box text wow slideInRight">
+                <h2>联系我们</h2>
+                <p class="title-p">姓名：吴彦祖 学号：19060721</p>
+                <div class="info">
+                    <ul>
+                        <li><span class="fa fa-map-marker"></span> 地球</li>
+                        <li><span class="fa fa-phone"></span> 86 9999999999</li>
+                        <li><span class="fa fa-envelope"></span> Lee_98@foxmail.com</li>
+                    </ul>
+                </div>
+                <div class="social">
+                    <a href=""><span class="fa fa-phone"></span></a>
+                    <a href=""><span class="fa fa-weibo"></span></a>
+                    <a href=""><span class="fa fa-qq"></span></a>
+                    <a href=""><span class="fa fa-wechat"></span></a>
+                </div>
+
+                <div class="copy">
+                    PowerBy &copy; Lee
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Contact -->
+<script src="js/jquery.min.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper(".swiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+    $(document).ready(function () {
+
+        $(".ham-burger, .nav ul li a").click(function () {
+
+            $(".nav").toggleClass("open")
+
+            $(".ham-burger").toggleClass("active");
+        })
+        $(".accordian-container").click(function () {
+            $(".accordian-container").children(".body").slideUp();
+            $(".accordian-container").removeClass("active")
+            $(".accordian-container").children(".head").children("span").removeClass("fa-angle-down").addClass("fa-angle-up")
+            $(this).children(".body").slideDown();
+            $(this).addClass("active")
+            $(this).children(".head").children("span").removeClass("fa-angle-up").addClass("fa-angle-down")
+        })
+
+        $(".nav ul li a, .go-down").click(function (event) {
+            if (this.hash !== "") {
+
+                event.preventDefault();
+
+                var hash = this.hash;
+
+                $('html,body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function () {
+                    window.location.hash = hash;
+                });
+
+                // add active class in navigation
+                $(".nav ul li a").removeClass("active")
+                $(this).addClass("active")
+            }
+        })
+    })
+
+</script>
+<script src="js/wow.min.js"></script>
+<script src="js/index.js"></script>
+<script src="js/wow.min.js"></script>
+<script>
+    wow = new WOW(
+        {
+            animateClass: 'animated',
+            offset: 0,
+        }
+    );
+    wow.init();
+
+   function printInfo() {
+       console.log($("#name").text());
+       console.log($("#studentID").text());
+       console.log($("#class").text());
+       $(".wow .bounceInUp").each(function (){
+           console.log($(this).children("h2").text());
+           $(this).children("p").each(function (){
+               console.log($(this).text())
+           })
+       })
+   }
+</script>
+</html>

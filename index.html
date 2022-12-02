@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <title>Gym Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <style>
+        .wow:first-child {
+            visibility: hidden;
+        }
+
+        .swiper {
+            height: 800px;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .dropdown-content {
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+
+<!-- Start Header  -->
+<header>
+    <div class="container">
+        <div class="logo">
+            <a href="">Fitness <span>Club</span></a>
+        </div>
+        <a href="javascript:void(0)" class="ham-burger">
+            <span></span>
+            <span></span>
+        </a>
+        <div class="nav">
+            <ul>
+                <li><a href="#home">主页</a></li>
+                <li class="dropdown" onmouseenter="dropdownShow()" onmouseleave="dropdownNone()" onclick="dropdownShow()">
+                    <a href="javascript:void(0)">后台 <span>🗡</span></a>
+                    <ul class="dropdown-content">
+                        <li><a href="admin/login.html">登陆</a></li>
+                        <li><a href="admin/register.html">注册</a></li>
+                    </ul>
+                </li>
+                <li><a href="#carousel">动态轮播</a></li>
+                <li><a href="#about">For you</a></li>
+                <li><a href="#service">服务</a></li>
+                <li><a href="#classes">课程</a></li>
+                <li><a href="#price">套餐</a></li>
+                <li><a href="#contact">联系</a></li>
+                <li><a href="about.html">关于我们</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!-- End Header  -->
+
+<!-- Start Home -->
+<section class="home wow flash" id="home">
+    <div class="container">
+        <h1 class="wow slideInLeft" data-wow-delay="1s">It's <span>gym</span> time. Let's go</h1>
+        <h1 class="wow slideInRight" data-wow-delay="1s">We are ready to <span>fit you</span></h1>
+    </div>
+    <!-- go down -->
+    <a href="#carousel" class="go-down">
+        <i class="fa fa-angle-down" aria-hidden="true"></i>
+    </a>
+    <!-- go down -->
+
+</section>
+<!-- End Home -->
+
+
+<!-- Start carousel -->
+<div class="swiper wow bounceInUp" id="carousel">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/Chart1.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="images/Chart2.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="images/Chart3.jpg" alt=""></div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+    <!-- 如果需要导航按钮 -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>
+<!-- End carousel -->
+
+
+<!-- Start About -->
+<section class="about" id="about">
+    <div class="container">
+        <div class="content">
+            <div class="box wow bounceInUp">
+                <div class="inner">
+                    <div class="img">
+                        <img src="images/about1.jpg" alt="about"/>
+                    </div>
+                    <div class="text">
+                        <h4>免费咨询</h4>
+                        <p>
+                            我们不是来带你去健身的，我们是来激励你去实现目标的。如果您不确定自己的目标是什么，或者不知道从哪里开始您的健身之旅，请进来与我们的合格教练交谈，他可以帮助您制定计划。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box wow bounceInUp" data-wow-delay="0.2s">
+                <div class="inner">
+                    <div class="img">
+                        <img src="images/about2.jpg" alt="about"/>
+                    </div>
+                    <div class="text">
+                        <h4>最佳培训</h4>
+                        <p>我们每天举办数十节课程，从硬拉和 HIIT
+                            到瑜伽和普拉提。我们还针对不同的能力水平开设了不同的课程。查看我们的个人课程页面以了解何时进行，如果您想了解我们如何训练，请联系我们。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box wow bounceInUp" data-wow-delay="0.4s">
+                <div class="inner">
+                    <div class="img">
+                        <img src="images/about3.jpg" alt="about"/>
+                    </div>
+                    <div class="text">
+                        <h4>塑造完美身材</h4>
+                        <p>
+                            我们的目的是超越汗水。我们想让你更健康、更好、更强壮。我们的教练会教你一切你需要知道的，让你拥有最好的生活状态。我们将引导您完成一项安全但具有挑战性的锻炼，利用您所学的技能。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End About -->
+
+
+<!-- Start Service -->
+<section class="service" id="service">
+    <div class="container">
+        <div class="content">
+            <div class="text box wow slideInLeft">
+                <h2>VIP服务</h2>
+                <p>
+                    我们相信广泛、普遍和包容的适应性；锻炼结合了多种功能性运动，包括有氧运动、体操、举重、奥林匹克举重和健美运动的元素。每天都会带来新的和令人兴奋的东西！无论您目前的健身水平和目标如何，我们的教练都会教您健身和保持健康所需的一切。</p>
+                <p>我们明白。走进我们的大门，您无需身材好或经验丰富。我们通过我们的 WC Prep Course
+                    提供初学者培训，您将在其中与我们的一位教练进行一对一的合作。我们将教你一切你需要知道的东西——正确的形式、基本的举重和基础——让你动起来。</p>
+                <a href="" class="btn">Start Now</a>
+            </div>
+            <div class="accordian box wow slideInRight">
+                <div class="accordian-container active">
+                    <div class="head">
+                        <h4>WC预备课程</h4>
+                        <span class="fa fa-angle-down"></span>
+                    </div>
+                    <div class="body">
+                        <p>与 WCSC 教练进行 2 次 60 分钟的私人一对一课程</p>
+                        <p>学习/回顾动作/锻炼</p>
+                        <p>在您方便的时候安排</p>
+                        <p>适合体能训练少于 3 个月的客户</p>
+                    </div>
+                </div>
+                <div class="accordian-container">
+                    <div class="head">
+                        <h4>WC性能指导</h4>
+                        <span class="fa fa-angle-up"></span>
+                    </div>
+                    <div class="body">
+                        <p><strong>咨询：</strong> 初次会议讨论您的目标、当前的营养和生活习惯以及身体能力（面对面或通过电话）。
+                        </p>
+                        <p><strong>评估：</strong> 对您的结构平衡和能量系统进行初步测试。这可以亲自完成，也可以通过视频分析完成。
+                        </p>
+                        <p><strong>个性化营养方案：</strong>基于行为和宏观营养处方策略，可长期有效地解决您的营养问题。</p>
+                        <p><strong>个性化健身计划：</strong> 基于初步评估并由您的教练每周审查的定制训练计划。</p>
+                        <p><strong>持续的支持和审查：</strong> 每 2-4 周与您的教练进行 30
+                            分钟的签到和审查，以讨论您的计划并确保持续成功（亲自或通过电话）；此外，无限制的文本/电子邮件支持、每周反馈和分析。
+                        </p>
+                    </div>
+                </div>
+                <div class="accordian-container">
+                    <div class="head">
+                        <h4>WC个人训练</h4>
+                        <span class="fa fa-angle-up"></span>
+                    </div>
+                    <div class="body">
+                        <p>1对1培训</p>
+                        <p>个人辅导</p>
+                        <p>私人会议</p>
+                        <p>达到或保持健康的体重</p>
+                        <p>专注于独特的健康问题</p>
+                        <p>训练适合您的理想方式</p>
+                        <p>问责制</p>
+                        <p>学习和发展新技能</p>
+                    </div>
+                </div>
+                <div class="accordian-container">
+                    <div class="head">
+                        <h4>其他福利</h4>
+                        <span class="fa fa-angle-up"></span>
+                    </div>
+                    <div class="body">
+                        <p>每周 7 天无限制地参加团体课程</p>
+                        <p>每周 7 天无限制使用开放式健身房</p>
+                        <p>免费访问 <strong style="color: red">大肌霸</strong> 应用程序，您可以在其中跟踪锻炼、进度并与我们社区中的其他人联系。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Service -->
+
+<!-- Start Classes -->
+<section class="classes" id="classes">
+    <div class="container">
+        <div class="content">
+            <div class="box img wow slideInLeft">
+                <img src="images/class2.png" alt="classes"/>
+            </div>
+            <div class="box text wow slideInRight">
+                <h2>课程</h2>
+                <p>超过150种的课程，全面覆盖减脂增肌等多种需求,
+                    专业教练营造最佳团课氛围，融入，高效，快乐，释放让你沉迷团课带来的激情。</p>
+                <div class="class-items">
+                    <div class="item wow bounceInUp">
+                        <div class="item-img">
+                            <img src="images/class3.png" alt="classes"/>
+                            <div class="price">
+                                ￥99
+                            </div>
+                        </div>
+                        <div class="item-text">
+                            <h4>瑜伽课程</h4>
+                            <p>是一种强有力、健康的串联体位式瑜伽。能够达到减肥、提高身体力量并提高灵活性的目的。</p>
+                        </div>
+                    </div>
+                    <div class="item wow bounceInUp">
+                        <div class="item-text">
+                            <h4>身体格斗</h4>
+                            <p>
+                                需要来一次彻底释放吗？受武术启发，BODYCOMBAT从空手道、拳击、跆拳道踢腿和KATA等方式中燃烧热量。大声吼出压力与不满吧！</p>
+                        </div>
+                        <div class="item-img">
+                            <img src="images/class1.jpg" alt="classes"/>
+                            <div class="price">
+                                ￥99
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Classes -->
+
+<!-- Start Today -->
+<section class="start-today">
+    <div class="container">
+        <div class="content">
+            <div class="box text wow slideInLeft">
+                <h2>即刻开始锻炼</h2>
+                <p>我们的在线私人教练课程旨在为您提供学习的灵活性，同时还要保持定期的工作和生活方式承诺。</p>
+                <a href="" class="btn">Start Now</a>
+            </div>
+            <div class="box img wow slideInRight">
+                <img src="images/gallery4.jpg" alt="start today"/>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- End Start Today -->
+
+
+<!-- Start Gallery -->
+<section class="gallery" id="gallery">
+    <h2>精彩瞬间</h2>
+    <div class="content">
+        <div class="box wow slideInLeft">
+            <img src="images/gallery1.jpg" alt="gallery"/>
+        </div>
+        <div class="box wow slideInRight">
+            <img src="images/gallery2.jpg" alt="gallery"/>
+        </div>
+        <div class="box wow slideInLeft">
+            <img src="images/gallery3.jpg" alt="gallery"/>
+        </div>
+        <div class="box wow slideInRight">
+            <img src="images/gallery4.jpg" alt="gallery"/>
+        </div>
+    </div>
+</section>
+<!-- End Gallery -->
+
+<!-- Start Price -->
+<section class="price-package" id="price">
+    <div class="container">
+        <h2>选择你的套餐</h2>
+        <p class="title-p">
+            我们的学生支持服务随时可以帮助你，帮助你在整个课程中取得进步。如果您对评估或课程作业有任何疑问，您可以随时联系您的教练。</p>
+        <div class="content">
+            <div class="box wow bounceInUp">
+                <div class="inner">
+                    <div class="price-tag">
+                        ￥399/月
+                    </div>
+                    <div class="img">
+                        <img src="images/price1.jpg" alt="price"/>
+                    </div>
+                    <div class="text">
+                        <h3>减肥Plus</h3>
+                        <p>专业级别体质监测</p>
+                        <p>身体成分分析</p>
+                        <p>课程免费体验</p>
+                        <p>100元私教优惠券</p>
+                        <a href="" class="btn">Join Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box wow bounceInUp" data-wow-delay="0.2s">
+                <div class="inner">
+                    <div class="price-tag">
+                        ￥499/月
+                    </div>
+                    <div class="img">
+                        <img src="images/price2.jpg" alt="price"/>
+                    </div>
+                    <div class="text">
+                        <h3>健美训练</h3>
+                        <p>专属定制课程</p>
+                        <p>定制营服</p>
+                        <p>1V1私教体验</p>
+                        <p>游泳池免费开放</p>
+                        <a href="" class="btn">Join Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box wow bounceInUp" data-wow-delay="0.4s">
+                <div class="inner">
+                    <div class="price-tag">
+                        ￥9999/月
+                    </div>
+                    <div class="img">
+                        <img src="images/price3.jpg" alt="price"/>
+                    </div>
+                    <div class="text">
+                        <h3>大肌霸</h3>
+                        <p>专属定制课程</p>
+                        <p>解锁所有场所课程</p>
+                        <p>肉体到心灵的极致服务</p>
+                        <p><strong style="color: red">♥</strong>店长私人微信<strong style="color: red">♥</strong></p>
+                        <a href="" class="btn">Join Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Price -->
+
+<!-- Start Contact -->
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="content">
+            <div class="box form wow slideInLeft">
+                <form>
+                    <label>
+                        <input type="text" placeholder="Enter Name">
+                    </label>
+                    <label>
+                        <input type="text" placeholder="Enter Email">
+                    </label>
+                    <label>
+                        <input type="text" placeholder="Enter Mobile">
+                    </label>
+                    <label>
+                        <textarea placeholder="Enter Message"></textarea>
+                    </label>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+            <div class="box text wow slideInRight">
+                <h2>联系我们</h2>
+                <p class="title-p">姓名：李生 学号：19060721</p>
+                <div class="info">
+                    <ul>
+                        <li><span class="fa fa-map-marker"></span> 地球</li>
+                        <li><span class="fa fa-phone"></span> 86 9999999999</li>
+                        <li><span class="fa fa-envelope"></span> Lee_98@foxmail.com</li>
+                    </ul>
+                </div>
+                <div class="social">
+                    <a href=""><span class="fa fa-phone"></span></a>
+                    <a href=""><span class="fa fa-weibo"></span></a>
+                    <a href=""><span class="fa fa-qq"></span></a>
+                    <a href=""><span class="fa fa-wechat"></span></a>
+                </div>
+
+                <div class="copy">
+                    PowerBy &copy; Lee
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Contact -->
+
+
+<!-- jquery -->
+
+<script src="js/jquery.min.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
+<script>
+    // 幻灯片
+    const swiper = new Swiper(".swiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+
+    // 侧边栏
+    $(document).ready(function () {
+        $(".ham-burger, .nav ul li a").click(function () {
+            if ($(this).text().indexOf("后台") === 0) {
+                return
+            }
+            $(".nav").toggleClass("open")
+            $(".ham-burger").toggleClass("active");
+        })
+        let $accordian = $(".accordian-container");
+        $accordian.click(function () {
+            $accordian.children(".body").slideUp();
+            $accordian.removeClass("active")
+            $accordian.children(".head").children("span").removeClass("fa-angle-down").addClass("fa-angle-up")
+            $(this).children(".body").slideDown();
+            $(this).addClass("active")
+            $(this).children(".head").children("span").removeClass("fa-angle-up").addClass("fa-angle-down")
+        })
+        // 下一页
+        $(".nav ul li a, .go-down").click(function (event) {
+            if (this.hash !== "") {
+                event.preventDefault(); // 防止打开url
+                const hash = this.hash;
+                $('html,body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function () {
+                    window.location.hash = hash;
+                });
+                $(".nav ul li a").removeClass("active")
+                $(this).addClass("active")
+            }
+        })
+    })
+
+</script>
+<script src="js/wow.min.js"></script>
+<script src="js/index.js"></script>
+<script>
+    wow = new WOW(
+        {
+            animateClass: 'animated',
+            offset: 0,
+        }
+    );
+    wow.init();
+</script>
+</body>
+</html>
+
+
+
+
+
+
