@@ -25,7 +25,7 @@
                 <img src="images/me.jpeg" alt="classes"/>
             </div>
             <div class="box text wow slideInRight">
-                <h2 id="name">吴彦祖</h2>
+                <h2 id="name">李礼辛</h2>
                 <p><span id="studentID">学号：19060721</span>
                     <span id="class">班级：1907</span></p>
                 <div class="class-items">
@@ -68,7 +68,7 @@
             </div>
             <div class="box text wow slideInRight">
                 <h2>联系我们</h2>
-                <p class="title-p">姓名：吴彦祖 学号：19060721</p>
+                <p class="title-p">姓名：李礼辛 学号：19060721</p>
                 <div class="info">
                     <ul>
                         <li><span class="fa fa-map-marker"></span> 地球</li>
@@ -92,64 +92,6 @@
 </section>
 <!-- End Contact -->
 <script src="js/jquery.min.js"></script>
-<script src="js/swiper-bundle.min.js"></script>
-<script>
-    const swiper = new Swiper(".swiper", {
-        spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-    });
-    $(document).ready(function () {
-
-        $(".ham-burger, .nav ul li a").click(function () {
-
-            $(".nav").toggleClass("open")
-
-            $(".ham-burger").toggleClass("active");
-        })
-        $(".accordian-container").click(function () {
-            $(".accordian-container").children(".body").slideUp();
-            $(".accordian-container").removeClass("active")
-            $(".accordian-container").children(".head").children("span").removeClass("fa-angle-down").addClass("fa-angle-up")
-            $(this).children(".body").slideDown();
-            $(this).addClass("active")
-            $(this).children(".head").children("span").removeClass("fa-angle-up").addClass("fa-angle-down")
-        })
-
-        $(".nav ul li a, .go-down").click(function (event) {
-            if (this.hash !== "") {
-
-                event.preventDefault();
-
-                var hash = this.hash;
-
-                $('html,body').animate({
-                    scrollTop: $(hash).offset().top
-                }, 800, function () {
-                    window.location.hash = hash;
-                });
-
-                // add active class in navigation
-                $(".nav ul li a").removeClass("active")
-                $(this).addClass("active")
-            }
-        })
-    })
-
-</script>
-<script src="js/wow.min.js"></script>
-<script src="js/index.js"></script>
 <script src="js/wow.min.js"></script>
 <script>
     wow = new WOW(
@@ -159,7 +101,6 @@
         }
     );
     wow.init();
-
    function printInfo() {
        console.log($("#name").text());
        console.log($("#studentID").text());

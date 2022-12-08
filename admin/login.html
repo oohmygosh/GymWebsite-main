@@ -74,13 +74,24 @@
 <script src="../js/jquery.min.js"></script>
 <script src="../js/popper.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
+<!--会员数据初始化-->
 <script src="../js/admin/members.js"></script>
+<!--增删改查代码-->
 <script src="../js/admin/crud.js"></script>
 <!--suppress ExceptionCaughtLocallyJS -->
 <script>
-
     function login() {
         let user = localStorage.getItem("user");
+        if (user === undefined){
+            localStorage.setItem("user", JSON.stringify({
+                "username": "lilixin",
+                "password": "19060721",
+                "phone": "15600000000",
+                "email": "vipicu@gmail.com",
+                "id_num": "450821200000000000",
+                "status":0
+            }))
+        }
         try {
             user = JSON.parse(user)
             let username = document.querySelector("#id_username").value;
@@ -97,5 +108,19 @@
     }
 
 </script>
+<!-- Start Contact -->
+<section class="contact" id="contact" style="margin-top: 200px">
+    <div class="container">
+        <div class="content">
+            <div class="box text wow slideInRight">
+                <p class="title-p">姓名：李礼辛 学号：19060721</p>
+                <div class="copy">
+                    PowerBy &copy; Lee
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Contact -->
 </body>
 </html>

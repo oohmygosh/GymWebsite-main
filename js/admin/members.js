@@ -486,8 +486,3 @@ parse.forEach((data, index) => {
 })
 // 存入本地存储
 localStorage.setItem("members", JSON.stringify(parse))
-
-function data_format(date) {
-    return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
-}
-

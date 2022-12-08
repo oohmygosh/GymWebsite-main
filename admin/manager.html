@@ -117,6 +117,16 @@
                             <input type="text" name="subscription_period" disabled
                                    class="datepicker form-control" id="id_registration_date">
                         </div>
+                        <div class="form-group col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                            <label for="age">年龄<span class="req"> *</span></label>
+                            <input type="text" name="age" required
+                                   class="datepicker form-control" id="age">
+                        </div>
+                        <div class="form-group col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                            <label for="dob">出生日期<span class="req"> *</span></label>
+                            <input type="date" name="dob" required
+                                   class="datepicker form-control" id="dob">
+                        </div>
                         <button type="submit" class="btn btn-success" style="margin: 30px 0">保存</button>
                     </div>
                 </div>
@@ -138,6 +148,7 @@
         // 读取请求参数
         (function ($) {
             $.getUrlParam = function (name) {
+                // 根据正则截取url参数
                 const reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
                 const r = window.location.search.substr(1).match(reg);
                 if (r != null) return unescape(r[2]);
@@ -145,9 +156,9 @@
             }
         })(jQuery);
         initData($.getUrlParam('id'))
-
         function initData(id) {
             member = getMember(id);
+            if (id === null || member === undefined) return
             $("#cropedBigImg").attr("src", member.photo);
             $("#phone").val(member.phone)
             $("#name").val(member.name)
@@ -155,22 +166,30 @@
             $("#id_fee_status").val(member.status)
             $("#id_registration_date").val(member.subscription_period)
             $("#id_num").val(member.id_num)
+            $("#dob").val(member.dob)
+            $("#age").val(member.age)
             $("#email").val(member.email)
         }
     });
-
+    // 保存/新增会员
     function save_member() {
+        if (member === undefined) {
+            member = {}
+            member.subscription_period = data_format(new Date())
+            member.registration_date = data_format(new Date())
+        }
         let data = $("#member_from").serializeArray();
         let photo = $("#cropedBigImg").attr("src");
+        console.log(data)
         data.forEach(field => member[field.name] = field.value)
         member.photo = photo
         saveMember(member)
-        alert("修改成功")
+        alert("保存成功")
         location.href = './list.html'
         return false
     }
 
-
+    // 获取上传的图片并回显到网页
     $('#chooseImage').on('change', function () {
         let image = new Image();
         image.src = window.URL.createObjectURL(this.files[0]);
@@ -179,7 +198,7 @@
             $('#cropedBigImg').attr('src', getBase64Image(image));
         }
     });
-
+    // 图片转base64
     function getBase64Image(img) {
         const canvas = document.createElement("canvas");
         canvas.width = img.width;
@@ -188,8 +207,25 @@
         ctx.drawImage(img, 0, 0, img.width, img.height);
         return canvas.toDataURL("image/png")
     }
+    // 日期格式化
+    function data_format(date) {
+        return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
+    }
 </script>
-
+<!-- Start Contact -->
+<section class="contact" id="contact" style="margin-top: 200px">
+    <div class="container">
+        <div class="content">
+            <div class="box text wow slideInRight">
+                <p class="title-p">姓名：李礼辛 学号：19060721</p>
+                <div class="copy">
+                    PowerBy &copy; Lee
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Contact -->
 
 </body>
 </html>

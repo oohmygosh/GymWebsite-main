@@ -12,15 +12,21 @@ function delById(id) {
 }
 
 function saveMember(member){
-    console.log(member.photo)
     let members = getMembers();
-    for (let index in members){
+    if (member.id === undefined){
+        member.id = -1
+    }
+    let index
+    for (index in members){
         if (members[index].id === member.id) {
             members[index] = member
             reloadData("members",members)
             return
         }
     }
+    member.id = (parseInt(index) + 2)
+    members.push(member)
+    reloadData("members",members)
 }
 
 function getMember(id) {
